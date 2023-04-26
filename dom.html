@@ -25,10 +25,10 @@
             fetch('https://brasilapi.com.br/api/cep/v1/${evento.target.value}')
             .then(resposta => resposta.json())
             .then(dados => {
-                atribuirValor('estado', dados.state);
-                atribuirValor('cidade', dados.city);
-                atribuirValor('bairro', dados.neighborhood);
-                atribuirValor('logradouro', dados.street);
+                atribuirValor("estado", dados.state);
+                atribuirValor("cidade", dados.city);
+                atribuirValor("bairro", dados.neighborhood);
+                atribuirValor("logradouro", dados.street);
             });
         };
         
