@@ -18,11 +18,11 @@
         <input type="text" id="logradouro" placeholder="Logradouro" size="30" disabled><br>
         <input type="button" value=" Enviar">
     </form>
-
+    
     <script>
         document.querySelector("#cep").addEventListener("change", buscaDadosApi);
         function buscaDadosApi(evento){
-            fetch('https://brasilapi.com.br/api/cep/v1/${evento.target.value}')
+            fetch('https://brasilapi.com.br/api/cep/v1/ ${evento.target.value}')
             .then(resposta => resposta.json())
             .then(dados => {
                 atribuirValor('estado', dados.state);
